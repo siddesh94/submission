@@ -10,22 +10,22 @@
       <img alt="customer" src="assets/images/customers.svg" />
       <label class="route">Customers</label></div>
     <div routerLink="/submission" class="navitem"  (click)="changeRoute('submission')" [ngClass]="selectedRoute === 'submission' ? 'selected' : null">
-      <img alt="submission" src="../assets/images/submissions.svg" />
+      <img alt="submission" src="assets/images/submissions.svg" />
       <label class="route">Submissions</label></div>
     <div routerLink="/history" class="navitem" (click)="changeRoute('history')" [ngClass]="selectedRoute === 'history' ? 'selected' : null">
-      <img alt="history" src="../assets/images/history.svg" />
+      <img alt="history" src="assets/images/history.svg" />
       <label class="route">History</label></div>
     <div routerLink="/reports" class="navitem" (click)="changeRoute('reports')" [ngClass]="selectedRoute === 'reports' ? 'selected' : null">
-      <img alt="report" src="../assets/images/reports.svg" />
+      <img alt="report" src="assets/images/reports.svg" />
       <label class="route">Reports</label></div>
     <div routerLink="/workflow" class="navitem" (click)="changeRoute('workflow')" [ngClass]="selectedRoute === 'workflow' ? 'selected' : null">
-      <img alt="workflow" src="../assets/images/workflow.svg" />
+      <img alt="workflow" src="assets/images/workflow.svg" />
       <label class="route">Workflow</label></div>
   </nav>
 
   <div class="options">
-    <img alt="notification" class="navbar-option notification" src="../assets/images/notification.svg">
-    <img alt="logout" class="navbar-option" src="../assets/images/logout.svg">
+    <img alt="notification" class="navbar-option notification" src="assets/images/notification.svg">
+    <img alt="logout" class="navbar-option" src="assets/images/logout.svg">
   </div>
 </div>
 <router-outlet></router-outlet>
