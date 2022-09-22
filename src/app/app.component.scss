@@ -1,0 +1,75 @@
+@import '../styles.scss';
+
+
+.navbar {
+
+    background-color: $primary;
+    // padding: 12px 0;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 72px;
+
+    .brand-name {
+        padding-left: 32px;
+        flex-grow: 1;
+        display: inline-block;
+
+        h3 {
+            font-size: 32px;
+            color: $secondary;
+            margin: 0;
+        }
+    }
+
+    .nav-items {
+        flex-grow: 4;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding-left: 130px;
+        flex-wrap: wrap;
+        height: 100%;
+
+        .navitem {
+            padding: 0 16px;
+            margin: 0 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+
+            img {
+                cursor: pointer;
+            }
+
+            &.selected {
+                background-color: $dark_blue;
+                
+            }
+
+            .route {
+                color: $secondary;
+                margin-left: 12px;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .options {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+
+        .notification {
+            margin-right: 22px;
+        }
+        .navbar-option {
+            cursor: pointer;
+        }
+    }
+}

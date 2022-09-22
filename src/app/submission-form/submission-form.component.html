@@ -1,0 +1,87 @@
+<div class="submission-wrap">
+    <h2>Submissions</h2>
+
+
+    <div class="input-wrapper">
+        <div class="input-fields">
+            <div class="search">
+                <img alt="magnifying-glass" src="../../assets/images/icon-search.svg" />
+                <input type="text" id="search-submissions" placeholder="Search"  name="search-submissions" [(ngModel)]="search" />
+            </div>
+
+            <div class="search">
+                <select class="submission-drp-dwn" name="forms" id="forms">
+                    <option value="Select form" selected disabled>Select Form</option>
+                    <option value="{{item}}" *ngFor="let item of form; let i = index;">{{item}}</option>
+                    <!-- <option value="Form 1">Form 1</option>
+                    <option value="Form 2">Form 2</option>
+                    <option value="Form 3">Form 3</option>
+                    <option value="Form 4">Form 4</option> -->
+                </select>
+            </div>
+
+            <div class="search">
+                <select class="submission-drp-dwn" name="status" id="status">
+                    <option value="Select form" selected disabled>Select status</option>
+                    <option value="{{item}}" *ngFor="let item of status; let i = index;">{{item}}</option>
+                </select>
+            </div>
+
+            <div class="search">
+                <i class="demo-icon icon-calendar"></i> 
+                <input type="date" #myDate id="submission-date" placeholder="Date"  name="submission-date" [(ngModel)]="submissionDt" />
+            </div>
+
+        </div>
+
+        <div class="toggle-button-wrapper">
+            <div class="map-list-wrapper">
+                <button class="toggle-button" [ngClass]="toggledItem === 'map' ? 'selected' : null" type="button" (click)="onToggleClick('map')">Map</button>
+                <button class="toggle-button" [ngClass]="toggledItem === 'list' ? 'selected' : null" type="button" (click)="onToggleClick('list')">List</button>
+            </div>
+
+            <div class="export-wrapper" (click)="export()">
+                <img alt="export" src="../../assets/images/export.svg"/> 
+                <label class="export-button"  >Export</label>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="main-content">
+
+        <div class="list-view" >
+
+            <div class="list-item" *ngFor="let item of submissionData; let i = index;">
+                <div class="workflow">
+                    <label class="work-flow" for="">Work Flow: Requires Location</label>
+                    <div class="status-wrap {{item.status_css}}">
+                        <div class="dot {{item.status_css}}"></div>
+                        <div class="status {{item.status_css}}">{{item.status}}</div>
+                    </div>
+                </div>
+
+                <div class="list-content">
+                    <label class="content-label gray" for="from">From:</label>
+                    <label class="content-label black-pearl" for="email" style="margin: 4px; ">{{item.from}}</label>
+                </div>
+
+                <div class="list-content">
+                    <label class="content-label gray" for="to">To:</label>
+                    <label class="content-label black-pearl" for="email" style="margin-left: 4px;">{{item.to}}</label>
+                </div>
+
+                <div class="list-content">
+                    <label class="content-label gray" for="due">Due date:</label>
+                    <label class="content-label orange-red" for="email" style="margin-left: 4px;">{{item.due_date}}</label>
+                </div>
+            </div>
+        </div>
+
+        <div id="map" class="map-view"></div>
+
+    </div>
+
+
+</div>

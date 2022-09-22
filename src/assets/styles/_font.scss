@@ -1,0 +1,12 @@
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto/Roboto-Regular.ttf");
+    src: url("../fonts//Roboto/roboto-regular-webfont.woff2") format("woff2"),
+      url("../fonts//Roboto//roboto-regular-webfont.woff") format("woff"),
+      url("/assets/fonts/Fontello/font/fontello.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @import '../fontello/css/fontello-codes';
+  @import '../fontello/css/fontello'; 
