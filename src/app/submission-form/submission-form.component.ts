@@ -79,7 +79,7 @@ export class SubmissionFormComponent implements OnInit, AfterViewInit {
       this.map.flyTo([position.latitude, position.longitude], 13);
 
       const icon = L.icon({
-        iconUrl: '../../assets/images/location.png',
+        iconUrl: 'assets/images/location.png',
         // shadowUrl: 'assets/images/marker-shadow.png',
         popupAnchor: [13, 0],
       });
